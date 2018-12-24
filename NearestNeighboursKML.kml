@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+<Document>
+
+<Style id="z1">
+<IconStyle><Icon><href>http://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href></Icon></IconStyle>
+</Style>
+
+<Style id="nns">
+<LineStyle><color>7fff0000</color><width>3</width></LineStyle>
+</Style>
+
+<description>Nearest Neighbors from 2621 Magnolia A</description>
+<Placemark id="Neighbour1">
+<styleUrl>#nns</styleUrl> <LineString><coordinates>
+-118.286670,34.032338,0
+-118.284321,34.026274,0
+</coordinates></LineString>
+</Placemark>
+    
+<Placemark id="Neighbour2">
+<styleUrl>#nns</styleUrl><LineString><coordinates>
+-118.286670,34.032338,0
+-118.289503,34.024957,0
+</coordinates></LineString>
+</Placemark>
+
+<Placemark id="Neighbour3">
+<styleUrl>#nns</styleUrl><LineString><coordinates>
+-118.286670,34.032338,0
+-118.282808,34.022058,0
+</coordinates></LineString>
+</Placemark>
+
+<Placemark><name>2621 Magnolia A</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.286670,34.032338</coordinates></Point>
+</Placemark>
+
+<Placemark><name>SGM</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.289155,34.021499</coordinates></Point>
+</Placemark>
+
+<Placemark><name>Leavey</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.282808,34.022058</coordinates></Point>
+</Placemark>
+
+<Placemark><name>Bookstore</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.286514,34.020982</coordinates></Point>
+</Placemark>
+
+<Placemark><name>RTH</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.289943,34.020288</coordinates></Point>
+</Placemark>
+
+<Placemark><name>Target</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.284321,34.026274</coordinates></Point>
+</Placemark>
+
+<Placemark><name>McCarthy Quad</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.283173,34.021009</coordinates></Point>
+</Placemark>
+
+<Placemark><name>Jefferson Blvd</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.289503,34.024957</coordinates></Point>
+</Placemark>
+
+<Placemark><name>Marshall School</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.285769,34.018963</coordinates></Point>
+</Placemark>
+</Document>
+</kml>

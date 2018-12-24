@@ -1,0 +1,24 @@
+CREATE TABLE locations (id integer not null primary key,name varchar, points geometry);
+
+INSERT INTO locations (id,name, points) VALUES
+(1,'2621 Magnolia A', ST_SetSRID(ST_MakePoint(-118.286670, 34.032338), 1234)),
+(2,'SGM', ST_SetSRID(ST_MakePoint(-118.289155, 34.021499),1234)),
+(3,'Leavey', ST_SetSRID(ST_MakePoint(-118.282808, 34.022058),1234)),
+(4,'Bookstore', ST_SetSRID(ST_MakePoint(-118.286514, 34.020982), 1234)),
+(5,'RTH', ST_SetSRID(ST_MakePoint(-118.289943, 34.020288), 1234)),
+(6,'Target', ST_SetSRID(ST_MakePoint(-118.284321, 34.026274), 1234)),
+(7,'McCarthy Quad', ST_SetSRID(ST_MakePoint(-118.283173 ,34.021009), 1234)),
+(8,'Jefferson Blvd', ST_SetSRID(ST_MakePoint(-118.289503 ,34.024957), 1234)),
+(9,'Marshall School', ST_SetSRID(ST_MakePoint(-118.285769 ,34.018963), 1234));
+
+Query1:
+SELECT ST_AsText(ST_ConvexHull(ST_Collect(points))) AS convex_hull
+FROM locations;
+
+Query2:
+SELECT l2.name As Nearest_Neighbours, ST_AsText(l2.points) As Coordinates
+FROM locations As l1, locations As l2   
+WHERE l1.id = 1 and l1.id <> l2.id  
+ORDER BY ST_Distance(l1.points,l2.points) 
+LIMIT 3
+
